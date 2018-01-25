@@ -26,8 +26,8 @@ public class LabNumber3 {
 		boolean validNum;
 		String cont = "y";
 
-		while (cont.equalsIgnoreCase("y")) {
-
+		while (cont.equalsIgnoreCase("y")) { // while loop for continue y/n
+// promt user to enter input, validate through do/while
 			do { // loop used to validate user input will be an int
 				System.out.print("Please enter a number: ");
 				if (scan.hasNextInt()) {
@@ -40,13 +40,13 @@ public class LabNumber3 {
 					scan.nextLine();
 				}
 			} while (!(validNum));
-
+// header and table size laid out
 			System.out.println("Number" + "   " + "Squared" + "   " + "Cubed");
 			System.out.println("======" + "   " + "=======" + "   " + "=====");
 			/// 9 spaces from N to "S" square
 			/// 10 spaces from S to "C" cube
 			/// Cubed is 5 spaces
-			for (int i = 1; i <= userNum; i++) {
+			for (int i = 1; i <= userNum; i++) { // for loop with format prints int, square, and cube of in with left indent
 				System.out.format("%-9d", i);
 				System.out.format("%-10d", (int) (Math.pow(i, 2)));
 				System.out.format("%-10d", (int) (Math.pow(i, 3)));
